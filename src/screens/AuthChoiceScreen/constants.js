@@ -1,0 +1,1 @@
+export const LOAD_AUTH = 'auth/LOAD_AUTH'
