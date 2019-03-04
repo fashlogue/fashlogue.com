@@ -3,16 +3,6 @@ import * as React from 'react';
 import { Route } from 'react-router-dom';
 import { ModalRoute } from 'react-router-modal';
 import { HomeScreen } from '../screens/HomeScreen';
-import { AuthChoiceScreen } from '../screens/AuthChoiceScreen';
-
-const baseModalProps = {
-  inClassName: 'react-router-modal__modal-in',
-  outClassName: 'react-router-modal__modal-out',
-  backdropClassName: 'react-router-modal__backdrop',
-  backdropInClassName: 'react-router-modal__backdrop-in',
-  backdropOutClassName: 'react-router-modal__backdrop-out',
-  outDelay: 500,
-};
 
 const routeList = [
   {
@@ -21,12 +11,7 @@ const routeList = [
     isExact: true,
     path: '/',
   },
-  {
-    component: AuthChoiceScreen,
-    isModal: true,
-    isExact: true,
-    path: '*/app-auths',
-  }
+  
   
 ];
 
@@ -44,25 +29,14 @@ export default class Routes extends React.Component {
    * @returns React.ReactNode
    */
   renderRoutes (
-    routeList,
-    props,
+    routeList
   ) {
-    return routeList.map((route, i) => (
-      route.isModal ?
-      <ModalRoute
-        component={route.component}
-        exact={route.isExact}
-        key={i}
-        parentPath={props.match.path}
-        path={route.path}
-        {...baseModalProps}
-      /> :
+    return routeList.map((route, i) => (    
       <Route
         component={route.component}
         exact={route.isExact}
         key={i}
         path={route.path}
-        {...baseModalProps}
       />
     ));
   }

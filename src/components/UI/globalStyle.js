@@ -8,7 +8,7 @@ const globalStyle = createGlobalStyle`
     width: 100%;
     margin: 0;
     padding: 0;
-    background: ${theme.colors.darkestgray};
+    background: ${theme.colors.white};
     font-family: ${theme.Text.fontFamily};
     color: ${theme.colors.lightergray}
   }

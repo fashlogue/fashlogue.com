@@ -4,6 +4,7 @@ import {
   Base,
   GlobalStyle,
 } from '../UI';
+import { ModalRoot } from '../../containers/Modal';
 import { Header } from '../Header';
 
 const appComponent = ({ children, ...props }) => {
@@ -19,6 +20,7 @@ const appComponent = ({ children, ...props }) => {
       <Base>
         {children}
       </Base>
+      <ModalRoot {...props}/>
     </Base>
   );
 };
