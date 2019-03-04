@@ -7,8 +7,6 @@ import {
 } from 'rebass';
 import {Tab} from '../../containers/Tab';
 import  { theme } from '../../config';
-import InputTrigger from 'react-input-trigger';
-import { Input } from '../UI/';
 
 
 const tabContentStyles = {
@@ -22,16 +20,8 @@ const tabModal = ({ closeModal, confirmAction, title, message }) => {
       <Tab>
         <div label="QUESTION">
           <Flex color="blue">
-          <InputTrigger
-            trigger={{
-              keyCode: 50,
-              shiftKey: true,
-            }}
-            onStart={(metaData) => { console.log(metaData); }}
-          >
-            <Input/>
-          </InputTrigger>
-      </Flex>
+          
+          </Flex>
         </div>
         <div  label="INSIGHT">
           <Flex color="blue" >item 2</Flex>

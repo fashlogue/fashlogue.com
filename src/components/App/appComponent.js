@@ -4,6 +4,8 @@ import {
   Base,
   GlobalStyle,
 } from '../UI';
+import { connect } from 'react-redux'
+import {showModal, hideModal } from '../../containers/Modal/actions'
 import { ModalRoot } from '../../containers/Modal';
 import { Header } from '../Header';
 
@@ -28,4 +30,19 @@ const appComponent = ({ children, ...props }) => {
 appComponent.propTypes = {
   children: PropTypes.element,
 };
-export default appComponent;
+const mapStateToProps = state => {
+  return {
+    ...state.modal
+  }
+}
+
+
+
+const mapDispatchToProps = dispatch => ({ 
+  hideModal: () => dispatch(hideModal()),
+  showModal: (modalProps, modalType) => {
+   dispatch(showModal({ modalProps, modalType }))
+  }
+ })
+
+export default connect(mapStateToProps, mapDispatchToProps)(appComponent);
