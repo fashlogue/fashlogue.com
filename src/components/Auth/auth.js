@@ -12,8 +12,6 @@ import { AuthForm } from './'
 
 const styles = {
     componentContainer: {
-      height: '95%',
-      width: '600px',
       borderRadius: theme.radiusSizes[1],
     },
 };

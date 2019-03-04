@@ -1,8 +1,11 @@
 import { combineReducers } from 'redux';
 import { default as HomeScreenReducer } from '../screens/HomeScreen/reducer';
-import { default as AuthScreenReducer } from '../screens/AuthChoiceScreen/reducer';
+import {ModalReducer } from '../containers/Modal';
+import {TabReducer} from '../containers/Tab';
+
 
 export default combineReducers({
     homeScreen: HomeScreenReducer,
-    authScreen: AuthScreenReducer
+    modal: ModalReducer,
+    tab: TabReducer
 });

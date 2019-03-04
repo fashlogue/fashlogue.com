@@ -6,14 +6,15 @@ const tabStyles = {
     listStyle: 'none',
     marginBottom: '-1px',
     borderButtom: `1px solid ${theme.colors.appgreen}`,
-    color: theme.colors.darkestgray
+    color: theme.colors.darkestgray,
+    cursor: 'pointer'
 }
 const tabComponent = ({activeTab, label,onClick})=> {
     
 
-    const activeStyle = activeTab == label ? {borderBottom: `2px solid ${theme.colors.appgreen}`} : {borderBottom: 'none'}; 
+    const activeStyle = activeTab === label ? {borderBottom: `2px solid ${theme.colors.instagramBlue}`, color: theme.colors.fashpink} : {borderBottom: 'none'}; 
     return (
-        <Box mx={3} p={3} style={{...tabStyles, ...activeStyle}} onClick={e=> onClick(label)}>
+        <Box mx='auto' p={3} style={{...tabStyles, ...activeStyle}} onClick={e=> onClick(label)}>
             {label}
         </Box>
     )

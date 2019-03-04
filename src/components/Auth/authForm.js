@@ -24,7 +24,7 @@ class authForm extends React.Component {
             <Box width={1}>
                 <Flex  justifyContent="center"  flexDirection="column">
                     <form method="get">
-                    <Flex mt={4} flexDirection="column" width={1} className="inputArea">
+                    <Flex flexDirection="column" width={1} className="inputArea">
                     <Label mb={2} color={theme.colors.darkergray}>EMAIL OR USERNAME</Label>
                         <Input type="text" required width={1}  borderColor="red"  bg="#fff" bg="blue"id="email"/>
                     </Flex>

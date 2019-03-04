@@ -11,8 +11,9 @@ const homeScreenReducer = (state = initialState, action) => {
             ...state,
             isLoading: action.payload.isLoading
           }
-          break
+
+          default:
+            return state
       }
-      return state;
   }
   export default homeScreenReducer

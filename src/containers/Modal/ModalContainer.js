@@ -2,13 +2,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import ReactModal from 'react-modal';
-
-import { SHOW_MODAL } from './constants';
 import {default as modalTypes} from '../../components/Modal'
 
 const customStyles = {
   content : {
-    top                   : '30%',
+    top                   : '50%',
     left                  : '50%',
     right                 : 'auto',
     bottom                : 'auto',
@@ -57,9 +55,9 @@ class ModalContainer extends React.Component {
       <div>
         <ReactModal
           isOpen={this.state.modalIsOpen}
-          onRequestClose={false}
           contentLabel="Example Modal"
           style={customStyles}
+          ariaHideApp={false}
         >
           <SpecifiedModal
             closeModal={this.closeModal}

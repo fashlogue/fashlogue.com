@@ -42,17 +42,21 @@ const header = (props) => {
         </Flex>
         <Flex 
           width={1/2} 
-          align="middle"
+          alignItems="center"
           justifyContent="flex-end"
         >
           <Box mx={4}>
             <Link onClick={ e=>props.history.push('/teams')}>Teams</Link>
           </Box>
           <Box mr={4}>
-            <Link onClick={ e=>props.history.push('/signup')}>Sign Up</Link>
-          </Box>
-          <Box mr={4}>
-            <Link onClick={ e=>props.history.push('/app-auths')}>Sign In</Link>
+            <Link onClick={ e=> props.showModal({
+                                                open: true,
+                                                title: 'Tab Modal',
+                                                message: 'confirm Modal',
+                                                confirmAction: props.hideModal,
+                                                closeModal: props.hideModal
+                                                }, 'tab')}>Authentication
+            </Link>
           </Box>
         </Flex>
                 

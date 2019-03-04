@@ -2,31 +2,35 @@ import React from 'react';
 import {
     Flex,
     Box,
-    Button,
-    Text
+    Text,
 } from 'rebass';
 import {Tab} from '../../containers/Tab';
 import  { theme } from '../../config';
+import { AuthForm } from '../Auth'
 
 
 const tabContentStyles = {
-  color: theme.color.darkestgray
+  color: theme.colors.darkestgray
+  
 }
 
 const tabModal = ({ closeModal, confirmAction, title, message }) => {
 
   return (
-    <Flex styles={{...tabContentStyles}} width={600}>
-      <Tab>
-        <div label="QUESTION">
-          <Flex color="blue">
-          
-          </Flex>
-        </div>
-        <div  label="INSIGHT">
-          <Flex color="blue" >item 2</Flex>
-        </div>
-      </Tab>
+    <Flex flexDirection='column' styles={{...tabContentStyles}} width={600}>
+      <Box>
+        <Text  onClick={e=> closeModal()} textAlign='right' color='blue'>close</Text>
+      </Box>
+      <Box>
+        <Tab>
+          <div label="Sign In">
+              <AuthForm/>
+          </div>
+          <div  label="Sign Up">
+              <AuthForm/>
+          </div>
+        </Tab>
+      </Box>
     </Flex>
   )
 }

@@ -11,8 +11,8 @@ const tabReducer = (state = initialState, action)=> {
           ...state,
           activeTab: action.label
         }
-        break
+        default:
+        return state
     }
-    return state;
 }
 export default tabReducer;

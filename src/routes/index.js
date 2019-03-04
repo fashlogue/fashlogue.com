@@ -1,7 +1,6 @@
 
 import * as React from 'react';
 import { Route } from 'react-router-dom';
-import { ModalRoute } from 'react-router-modal';
 import { HomeScreen } from '../screens/HomeScreen';
 
 const routeList = [
@@ -17,9 +16,6 @@ const routeList = [
 
 export default class Routes extends React.Component {
   
-  constructor (props) {
-    super(props);
-  }
   /**
    * Renders routes defined in the `routeList` params.
    *

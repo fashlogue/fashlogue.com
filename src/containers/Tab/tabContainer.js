@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {Flex, Box} from 'rebass';
+import { Flex } from 'rebass';
 import {Tab} from '../../components/Tab';
 import {switchTab} from './actions';
-import {theme} from '../../config'
+
 
 class TabContainer extends React.Component {
     constructor(props) {
