@@ -10,6 +10,14 @@ const styles =  {
   }  
 };
 
+/**
+ * @method fashlogueWordMark - create a wordmark for the logo
+ * 
+ * @param {null}
+ * 
+ * @return {React.ReactNode} 
+ */
+
 const fashlogueWordMark = () => {
   return (
     <Flex my={2} align="middle">

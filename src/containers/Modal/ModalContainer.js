@@ -23,6 +23,11 @@ const mapStateToProps = state => ({
   ...state.modal
 })
 
+/**
+ * @class ModalContainer - create a modal portal component
+ * 
+ * @return {React.ReactNode} 
+ */
 
 class ModalContainer extends React.Component {
   constructor(props) {
@@ -42,6 +47,12 @@ class ModalContainer extends React.Component {
     }
   }
 
+  /**
+   * @method closwModal - close the opened modal
+   * 
+   * @return {Void}
+   *  
+   */
   closeModal() {
     this.setState({ modalIsOpen: false })
   }

@@ -4,6 +4,11 @@ import { Flex } from 'rebass';
 import {Tab} from '../../components/Tab';
 import {switchTab} from './actions';
 
+/**
+ * @class TabContainer - create a tab that connects to the redux store.
+ * 
+ * @return {React.ReactNode}
+ */
 
 class TabContainer extends React.Component {
     constructor(props) {
@@ -14,6 +19,11 @@ class TabContainer extends React.Component {
         }
     }
 
+    /**
+     * @method onClickTabItem - the method invoked when a tab is clicked to set the clicked tab to the active tab.
+     * 
+     * @param {React.ReactNode} tab - tab to be clicked
+     */
     onClickTabItem = (tab)=> {
         this.setState({
             activeTab: tab

@@ -19,7 +19,13 @@ const styles = {
   }
 };
 
-
+/**
+ * @method header - create a header component
+ * 
+ * @param {Object} props - react props
+ * 
+ * @return {React.ReactNode}
+ */
 
 const header = (props) => {
   return (
@@ -54,7 +60,7 @@ const header = (props) => {
             <Link onClick={ e=>props.history.push('/teams')}>Teams</Link>
           </Box>
           <Box mr={4}>
-            <Link onClick={ e=> props.showModal({
+            <Link onClick={ ()=> props.showModal({
                                                 open: true,
                                                 title: 'Tab Modal',
                                                 message: 'tab Modal',

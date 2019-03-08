@@ -13,6 +13,8 @@ import { Checkbox } from '../UI/Checkbox/';
 
 /**
  * @class signInForm - form to sign Into the application
+ * 
+ * @return {React.ReactNode}
  *  
  */
 
@@ -32,6 +34,12 @@ class signInForm extends React.Component {
     handleCheckboxChange (event) {
         this.setState({ checked: event.target.checked });
     }
+
+    /**
+     * @method render 
+     * 
+     * @return {React.ReactNode} 
+     */
 
     render () {
         return (

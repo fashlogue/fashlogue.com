@@ -12,8 +12,16 @@ const tabContentStyles = {
   
 }
 
+
+/**
+ * @method tabModal - create a tab type modal.
+ * 
+ * @param {Object} props -- react props.
+ * 
+ * @return {React.ReactNode}
+ */
+
 const tabModal = (props) => {
-  console.log(props)
   return (
     <Flex flexDirection='column' styles={{...tabContentStyles}} width={600}>
       <Box>

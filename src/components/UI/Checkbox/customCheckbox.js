@@ -6,6 +6,16 @@ import {
 }   from  './nativeCheckbox';
 import { Check } from '../../Icons';
 
+/**
+ * @method CheckBox - Create a check box component.
+ * 
+ * @param {String} className  - className for the ReactNode
+ * 
+ * @param {Boolean } checked - check for true or false
+ * 
+ * @param {Object} props - React props
+ */
+
 const Checkbox = ({ className, checked, ...props }) => (
     <CheckboxContainer className={className}>
       <HiddenCheckbox checked={checked} {...props} />

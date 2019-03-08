@@ -7,6 +7,12 @@ import {
     Button
 } from 'rebass';
 import { theme } from '../../config';
+
+/**
+ * @method HeroComponent - create a hero component
+ * 
+ * @return {React.ReactNode}
+ */
 const HeroComponent = () => {
     return (
         <Flex bg={theme.colors.seablue} width={1} style={{padding: '4vh 4rem', userSelect: 'none'}}>
