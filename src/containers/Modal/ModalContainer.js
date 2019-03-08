@@ -39,7 +39,7 @@ class ModalContainer extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log(nextProps)
+ 
     if (nextProps !== this.props) {
       this.setState({
         modalIsOpen: nextProps.modalProps.open
