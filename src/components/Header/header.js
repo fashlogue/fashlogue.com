@@ -2,6 +2,8 @@ import * as React from 'react';
 import { FashlogueLogo } from '../Icons';
 import { theme } from '../../config';
 import { FashWordMark } from '../Icons';
+import { SignInForm } from '../Auth';
+import { OAuth } from '../Auth';
 import {
   Flex,
   Box,
@@ -12,9 +14,12 @@ const styles = {
   headerComponentContainer: {
     height: theme.Header.height[0],
     width: '100%',
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: theme.colors.darkestgray
   }
 };
+
+
 
 const header = (props) => {
   return (
@@ -52,10 +57,11 @@ const header = (props) => {
             <Link onClick={ e=> props.showModal({
                                                 open: true,
                                                 title: 'Tab Modal',
-                                                message: 'confirm Modal',
+                                                message: 'tab Modal',
                                                 confirmAction: props.hideModal,
-                                                closeModal: props.hideModal
-                                                }, 'tab')}>Authentication
+                                                closeModal: props.hideModal,
+                                                render: ()=>{return([{label: 'Sign in', elem: <SignInForm/>}, {label: 'Sign up', elem: <SignInForm/>}, {label: 'OAuth 2', elem: <OAuth/>} ])}
+                                                }, 'tab')}>Sign in
             </Link>
           </Box>
         </Flex>

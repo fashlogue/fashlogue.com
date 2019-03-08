@@ -1,2 +1,2 @@
-export { default } from './auth';
-export { default  as AuthForm} from './authForm';
+export { default as OAuth } from './oAuth';
+export { default  as SignInForm} from './signInForm';
