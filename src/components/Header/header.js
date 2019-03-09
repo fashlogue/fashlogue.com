@@ -2,6 +2,8 @@ import * as React from 'react';
 import { FashlogueLogo } from '../Icons';
 import { theme } from '../../config';
 import { FashWordMark } from '../Icons';
+import { SignInForm } from '../Auth';
+import { OAuth } from '../Auth';
 import {
   Flex,
   Box,
@@ -12,9 +14,18 @@ const styles = {
   headerComponentContainer: {
     height: theme.Header.height[0],
     width: '100%',
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: theme.colors.darkestgray
   }
 };
+
+/**
+ * @method header - create a header component
+ * 
+ * @param {Object} props - react props
+ * 
+ * @return {React.ReactNode}
+ */
 
 const header = (props) => {
   return (
@@ -42,17 +53,22 @@ const header = (props) => {
         </Flex>
         <Flex 
           width={1/2} 
-          align="middle"
+          alignItems="center"
           justifyContent="flex-end"
         >
           <Box mx={4}>
             <Link onClick={ e=>props.history.push('/teams')}>Teams</Link>
           </Box>
           <Box mr={4}>
-            <Link onClick={ e=>props.history.push('/signup')}>Sign Up</Link>
-          </Box>
-          <Box mr={4}>
-            <Link onClick={ e=>props.history.push('/app-auths')}>Sign In</Link>
+            <Link onClick={ ()=> props.showModal({
+                                                open: true,
+                                                title: 'Tab Modal',
+                                                message: 'tab Modal',
+                                                confirmAction: props.hideModal,
+                                                closeModal: props.hideModal,
+                                                render: ()=>{return([{label: 'Sign in', elem: <SignInForm/>}, {label: 'Sign up', elem: <SignInForm/>}, {label: 'OAuth 2', elem: <OAuth/>} ])}
+                                                }, 'tab')}>Sign in
+            </Link>
           </Box>
         </Flex>
                 

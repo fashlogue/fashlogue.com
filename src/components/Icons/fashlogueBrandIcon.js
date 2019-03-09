@@ -1,6 +1,14 @@
 import * as React from 'react';
 import { PropTypes } from 'prop-types';
 
+/**
+ * @method fashlogueBrandIcon - Icon/fashlogue logo
+ * 
+ * @param {Object} style - styles for the element 
+ * 
+ * @return {React.ReactNode}  
+ */
+
 const fashlogueBrandIcon = ({
   ...style
 }) => {

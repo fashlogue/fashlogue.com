@@ -11,8 +11,9 @@ const instagramBlue = '#125688';
 const fashpink = '#ec6c68';
 const white = '#fff';
 const steemConnectBlue = '#108ee9';
+const seablue = '#acd3e6';
 
-const headerHeight = [120, 73];
+const headerHeight = [60, 73];
 const sidebarWidth = 70;
 
 const space = [0, 4, 8, 16, 32, 64, 128, 256];
@@ -28,6 +29,7 @@ export default {
     blue,
     instagramBlue,
     steemConnectBlue,
+    seablue,
     white,
     gray,
     lightgray,
