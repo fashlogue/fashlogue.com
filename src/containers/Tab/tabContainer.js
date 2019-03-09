@@ -44,7 +44,7 @@ class TabContainer extends React.Component {
                     const {label} = child.props
                     
                     return (
-                        <Tab
+                        <Tab {...this.props}
                             activeTab={activeTab}
                             key={label}
                             label={label}
