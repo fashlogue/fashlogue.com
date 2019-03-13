@@ -16,7 +16,7 @@ const tabStyles = {
  * 
  * @param {React.ReactNode} - activeTab - the active tab that was clicked
  * 
- * @param {React.ReactNode} - label - the labe for the active tab.
+ * @param {React.ReactNode} - label - the label for the active tab.
  * 
  * @param {function} - onClick - this lidtens for the tab that was clicked
  * 
