@@ -48,7 +48,7 @@ class ModalContainer extends React.Component {
   }
 
   /**
-   * @method closwModal - close the opened modal
+   * @method closeModal - close the opened modal
    * 
    * @return {Void}
    *  
