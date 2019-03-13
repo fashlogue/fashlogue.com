@@ -1,0 +1,1 @@
+export const LOAD_HOME = 'home/LOAD_HOME'
