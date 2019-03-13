@@ -6,7 +6,6 @@ import {
   BrowserRouter as Router,
   Route,
 } from 'react-router-dom';
-import { ModalContainer } from 'react-router-modal';
 import { Provider } from 'react-redux';
 import { default as Routes } from '../../routes';
 
@@ -23,7 +22,7 @@ const appContainer = (props) => {
                     <App {...props}>
                       <Routes />
                     </App>
-                    <ModalContainer />
+                    
                   </div>
                 );
               }}
